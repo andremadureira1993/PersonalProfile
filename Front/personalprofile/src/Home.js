@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import Myself from './images/andre.jpg';
-import { useGlobalContext } from './context';
 
-const Home = () => {
-  const { closeSubmenu } = useGlobalContext();
+function Home() {
+
   return (
-    <section className='hero' onMouseOver={closeSubmenu}>
+    <section className='section'>
       <div className='hero-center'>
         <article className='hero-info'>
           <img src={Myself} alt='' className='person-img' />
@@ -18,7 +17,7 @@ const Home = () => {
         </article>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

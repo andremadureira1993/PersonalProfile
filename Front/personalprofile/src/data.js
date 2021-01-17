@@ -1,32 +1,42 @@
-import { FaLinkedin, FaBook, FaGithub } from 'react-icons/fa';
-import { MdWork, MdPersonPin } from 'react-icons/md';
-import { GiTechnoHeart, GiStairsGoal } from 'react-icons/gi';
-import { ImStackoverflow } from 'react-icons/im';
 import React from 'react';
-const sublinks = [
+import { FaBehance, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+export const links = [
   {
-    page: 'professional',
-    links: [
-      { label: 'Work experience', icon: <MdWork />, url: '/professional' },
-      { label: 'Stacks', icon: <GiTechnoHeart />, url: '/professional' },
-      { label: 'Looking Forward', icon: <GiStairsGoal />, url: '/professional' },
-    ],
+    id: 1,
+    url: '/',
+    text: 'home',
   },
   {
-    page: 'personal',
-    links: [
-      { label: 'who am I', icon: <MdPersonPin />, url: '/personal' },
-      { label: 'study', icon: <FaBook />, url: '/personal' }
-    ],
+    id: 2,
+    url: '/professional',
+    text: 'professional',
   },
   {
-    page: 'social',
-    links: [
-      { label: 'linkdin', icon: <FaLinkedin />, url: '/social' },
-      { label: 'stackoverflow', icon: <ImStackoverflow />, url: '/social' },
-      { label: 'github', icon: <FaGithub />, url: '/social' },
-    ],
+    id: 3,
+    url: '/personal',
+    text: 'personal',
+  },
+  {
+    id: 4,
+    url: '/contact',
+    text: 'contact',
+  },
+  {
+    id: 5,
+    url: '/profile',
+    text: 'profile',
   },
 ];
 
-export default sublinks;
+export const social = [
+  {
+    id: 1,
+    url: 'https://www.linkedin.com/in/andremssmoraes/',
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 2,
+    url: 'https://github.com/andremadureira1993',
+    icon: <FaGithub />,
+  },
+];

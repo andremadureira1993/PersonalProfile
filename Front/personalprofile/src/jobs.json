@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "order": 3,
+    "title": "Sr. Systems Analyst & Interaction Leader",
+    "dates": "March 2020 - Present",
+    "duties": [
+      "blablabla"
+    ],
+    "company": "HST Card Technology"
+  },
+  {
+    "id": "2",
+    "order": 2,
+    "title": "System Analyst",
+    "dates": "May 2017 - March 2020",
+    "duties": [
+      "test test"
+    ],
+    "company": "Icaro Tech"
+  }
+]

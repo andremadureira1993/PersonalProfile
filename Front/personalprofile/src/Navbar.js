@@ -1,50 +1,53 @@
-import React from 'react';
-import logo from './images/logo.svg';
+import React, { useState, useRef, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
-import { useGlobalContext } from './context';
+import { links, social } from './data';
 
 const Navbar = () => {
-  const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
-  const displaySubmenu = (e) => {
-    const page = e.target.textContent;
-    const tempBtn = e.target.getBoundingClientRect();
-    const center = (tempBtn.left + tempBtn.right) / 2;
-    const bottom = tempBtn.bottom - 3;
-    openSubmenu(page, { center, bottom });
+  const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
   };
-  const handleSubmenu = (e) => {
-    if (!e.target.classList.contains('link-btn')) {
-      closeSubmenu();
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = '0px';
     }
-  };
+  }, [showLinks]);
   return (
-    <nav className='nav' onMouseOver={handleSubmenu}>
+    <nav>
       <div className='nav-center'>
         <div className='nav-header'>
-          <p className='logo-title'> André Madureira S. S. Moraes</p>
-          {/* <img src={logo} className='nav-logo' alt='' /> */}
-          <button className='btn toggle-btn' onClick={openSidebar}>
+          <h3>André Madureira S. S. Moraes</h3>
+          <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>
         </div>
-        <ul className='nav-links'>
-          <li>
-            <button className='link-btn' onMouseOver={displaySubmenu}>
-              professional
-            </button>
-          </li>
-          <li>
-            <button className='link-btn' onMouseOver={displaySubmenu}>
-              personal
-            </button>
-          </li>
-          <li>
-            <button className='link-btn' onMouseOver={displaySubmenu}>
-              social
-            </button>
-          </li>
+        <div className='links-container' ref={linksContainerRef}>
+          <ul className='links' ref={linksRef}>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <ul className='social-icons'>
+          {social.map((socialIcon) => {
+            const { id, url, icon } = socialIcon;
+            return (
+              <li key={id}>
+                <a href={url}>{icon}</a>
+              </li>
+            );
+          })}
         </ul>
-        <button className='btn signin-btn'>Get in touch</button>
       </div>
     </nav>
   );
