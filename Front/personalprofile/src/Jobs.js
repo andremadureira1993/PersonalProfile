@@ -15,11 +15,11 @@ function Jobs() {
       }
   }
 
-  const { company, dates, duties, title } = jobs[value]
+  const { company, dates, duties, title, companyDescription } = jobs[value]
   return (
     <section className='section'>
       <div className='title'>
-        <h2>expierence</h2>
+        <h2>experience</h2>
         <div className='underline'></div>
       </div>
       <div className='jobs-center'>
@@ -41,6 +41,7 @@ function Jobs() {
         <article className='job-info'>
           <h3>{title}</h3>
           <h4>{company}</h4>
+          <h5>{companyDescription}</h5>
           <p className='job-date'>{dates}</p>
           {duties.map((duty, index) => {
             return (

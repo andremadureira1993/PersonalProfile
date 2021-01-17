@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Jobs from './Jobs';
 import Home from './Home';
 import Personal from './Personal';
+import NotFound from './NotFound'
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +26,7 @@ function App() {
         <Route path='/personal'>
           <Personal />
         </Route>
+        <Route component={NotFound} />
       </Switch>
     </Router>
   )
