@@ -2,20 +2,29 @@
   {
     "id": "1",
     "order": 1,
-    "title": "Life",
+    "title": "Current Location",
     "text": [
-      "Located in Campinas - SP",
-      "Living with my fiance and our two dogs(Tobby and Nina)"
+      "Living in Campinas - SP"
     ],
-    "item": "Life"
+    "item": "Location"
   },
   {
-    "id": "1",
-    "order": 1,
+    "id": "2",
+    "order": 2,
+    "title": "Family",
+    "text": [
+      "Living with my fiancee and our two dogs"
+    ],
+    "item": "Family"
+  },
+  {
+    "id": "3",
+    "order": 3,
     "title": "Hobbies",
     "text": [
+      "Run",
       "Books",
-      "Running"
+      "Code"
     ],
     "item": "Hobbies"
   }

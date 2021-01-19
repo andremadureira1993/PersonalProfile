@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Myself from './images/andre.jpg';
+import { FiDownload } from 'react-icons/fi';
+import pdf from './files/AndreMssMoraes_Resume.pdf';
 
-function Home() {
+export default function Home() {
 
   return (
     <section className='section'>
@@ -15,9 +17,10 @@ function Home() {
             This is my online resume. I hope you can have a great experience!
           </p>
         </article>
+        <button type='button' className='btn-cv' onClick={() =>  window.open(pdf, "_blank")}>
+          download my cv <FiDownload />
+        </button>
       </div>
     </section>
   )
 }
-
-export default Home

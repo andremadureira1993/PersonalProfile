@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBehance, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 export const links = [
   {
     id: 1,
@@ -18,7 +18,7 @@ export const links = [
   },
   {
     id: 4,
-    url: '/Skills',
+    url: '/skills',
     text: 'skills',
   }
 ];

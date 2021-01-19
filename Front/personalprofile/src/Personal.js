@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs';
+import { BsChevronDoubleDown } from 'react-icons/bs';
 import personal from './personal.json';
 
 function Personal() {
@@ -15,7 +15,7 @@ function Personal() {
       }
   }
 
-  const { title, text, item } = personal[value]
+  const { title, text } = personal[value]
   return (
     <section className='section'>
       <div className='title'>
@@ -38,7 +38,7 @@ function Personal() {
           })}
         </div>
         <article className='job-info'>
-          <h4>{item}</h4>
+          <h4>{title}</h4>
           {text.map((item, index) => {
             return (
               <div key={index} className='job-desc'>

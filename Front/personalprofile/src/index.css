@@ -17,6 +17,8 @@ Variables
   --clr-primary-8: hsl(184, 80%, 74%);
   --clr-primary-9: hsl(185, 94%, 87%);
   --clr-primary-10: hsl(186, 100%, 94%);
+  --clr-primary-11: hsl(0, 100%, 45%);
+  --clr-primary-12: hsl(0, 100%, 35%);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -262,6 +264,31 @@ Jobs
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-8);
+}
+
+.btn-cv {
+  text-transform: uppercase;
+  background: var(--clr-primary-11);
+  color: var(--clr-primary-8);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  font-weight: 700;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  display: block;
+  width: 12rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.btn-cv:hover {
+  color: var(--clr-primary-1);
+  background: var(--clr-primary-12);
 }
 
 .person-img {
