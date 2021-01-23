@@ -1,15 +1,15 @@
 import React from 'react'
-import Jobs from './Jobs';
-import Home from './Home';
-import Personal from './Personal';
-import NotFound from './NotFound'
-import Skills from './NotFound'
+import Jobs from './components/Jobs';
+import Home from './components/Home';
+import Personal from './components/Personal';
+import NotFound from './components/NotFound'
+import Skills from './components/NotFound'
+import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Navbar from './Navbar';
 
 function App() {
   return (

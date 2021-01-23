@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
 import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs';
-import jobs from './jobs.json';
+import jobs from '../jobs.json';
 
 function Skills() {
 

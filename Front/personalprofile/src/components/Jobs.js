@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
 import { BsChevronDoubleDown } from 'react-icons/bs';
-import jobs from './jobs.json';
+import jobs from '../data/jobs.json';
 
 function Jobs() {
   const [value, setValue] = useState(0);

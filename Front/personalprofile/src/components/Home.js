@@ -1,7 +1,7 @@
 import React from 'react'
-import Myself from './images/andre.jpg';
+import Myself from '../assets/images/andre.jpg';
 import { FiDownload } from 'react-icons/fi';
-import pdf from './files/AndreMssMoraes_Resume.pdf';
+import pdf from '../files/AndreMssMoraes_Resume.pdf';
 
 export default function Home() {
 

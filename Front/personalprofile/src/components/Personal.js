@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa';
 import { BsChevronDoubleDown } from 'react-icons/bs';
-import personal from './personal.json';
+import personal from '../data/personal.json';
 
 function Personal() {
   const [value, setValue] = useState(0);
