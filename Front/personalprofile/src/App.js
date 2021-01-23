@@ -3,7 +3,7 @@ import Jobs from './components/Jobs';
 import Home from './components/Home';
 import Personal from './components/Personal';
 import NotFound from './components/NotFound'
-import Skills from './components/NotFound'
+import Skills from './components/Skills'
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
